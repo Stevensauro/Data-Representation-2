@@ -574,16 +574,17 @@ function hideSomeContent(){
     const p = document.querySelector('#filter-options p')
     const searchBox = document.querySelector('input[type=search]')
 
-    if(window.innerWidth < 450){
-        document.querySelector("#country-table").hidden = true
-        document.querySelector("#language-table").hidden = true
-    } else if(window.innerWidth > 480){
-        document.querySelector("#country-table-sm").hidden = true
-        document.querySelector("#language-table-sm").hidden = true
-    } else if(window.innerWidth < 600){
-        p.classList.add('hidden')
+    if(window.innerWidth < 600){
+        if(window.innerWidth < 450){
+            document.querySelector("#country-table").hidden = true
+            document.querySelector("#language-table").hidden = true
+        } else if(window.innerWidth > 480){
+            document.querySelector("#country-table-sm").hidden = true
+            document.querySelector("#language-table-sm").hidden = true
+        }   
+        p.classList.remove('hidden')
         searchBox.setAttribute('placeholder', 'Search...')
-    } else if(window.innerWidth > 600){
+    }else if(window.innerWidth > 600){
         p.className = 'hidden'
         searchBox.setAttribute('placeholder', 'Search countries by name, city, or languages...')
     } 
