@@ -580,13 +580,13 @@ function hideSomeContent(){
     } else if(window.innerWidth > 480){
         document.querySelector("#country-table-sm").hidden = true
         document.querySelector("#language-table-sm").hidden = true
+    } else if(window.innerWidth < 600){
+        p.classList.add('hidden')
+        searchBox.setAttribute('placeholder', 'Search...')
     } else if(window.innerWidth > 600){
         p.className = 'hidden'
         searchBox.setAttribute('placeholder', 'Search countries by name, city, or languages...')
-    } else{
-        p.classList.remove('hidden')
-        searchBox.setAttribute('placeholder', 'Search...')
-    }
+    } 
 
 }
 
