@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+*{margin:0; box-sizing: border-box;}
+html, 
+nav button{
+    font-family: 'Roboto', Arial, serif;
+    font-size: 25px;
+}
+
+body{margin: 0;}
+
+.container{
+    margin: auto;
+    padding-bottom: 40px;
+    min-height: 100vh;
+    height: max-content;
+    background-color: rgb(219, 219, 219);
+    border: 8px solid black;
+}
+
+header{text-align: center; padding-top: 20px;}
+
+header p{margin: 15px auto;}
+header h1{font-size: 250%;}
+
+nav{
+    padding: 30px 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav button{
+    padding: 5px 40px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(194, 243, 255);
+}
+
+nav p{
+    position: relative;
+    font-size: 150%;
+    height: 100%;
+    top: 25%;
+}
+
+#filter-options p:nth-of-type(2){
+    text-align: center;
+    padding-top: 20px;
+    font-size: 115%;
+}
+
+@media only screen and (max-width: 800px){
+    nav button{
+        width: 88vw;
+        margin-bottom: 10px;
+    }
+
+    #filter-options{
+        margin: auto;
+    }
+
+    #filter-options p{
+        padding: 0 2vw;
+        text-align: left;
+        font-size: 90%;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+#filter-options button {position: relative;}
+#filter-options button img{
+    position: absolute;
+    float: right;
+    right: 5%;
+    top: 20%;
+    transform: scale(1.5);
+}
+
+/**TOP NAV BAR START**/
+
+input[type=search]{
+    padding: 20px;
+    width: 75vw;
+    max-width: 1000px;
+    font-size: 120%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px){
+    input[type=search]{
+        width: 88vw;
+        margin-bottom: 10px;
+        padding: 20px 5px;
+        font-size: 90%;
+    }
+
+}
+
+/**TOP NAV BAR END**/
+
+#countries-cards{
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 10px;
+    column-gap: 1%;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    overflow: hidden;
+    flex: 0 0 32%;
+    height: 550px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+#card figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    max-height: 220px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 249, 241);
+}
+
+#card img{
+    width: 60%;
+}
+
+#card section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+#card section div:nth-child(1){
+    min-height: 92px;
+    text-align: center;
+    font-size: 150%;
+    color: rgb(161, 103, 10);
+
+}
+
+@media only screen and (min-width: 1200px){
+    #countries-cards{
+        column-gap: 1%;
+        padding-left: 1%;
+    }
+    
+    #card{
+        flex: 0 0 24%;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    #countries-cards{
+        column-gap: 1.8%;
+        padding-left: 1%;
+    }
+
+    #card{
+        flex: 0 0 15%;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px){
+    #countries-cards{
+        padding-left: 1%;
+        row-gap: 7px;
+        column-gap: 1%;
+    }
+
+    #card{
+        flex: 0 0 49%;
+    }
+
+    #card figure{
+        height: 220px;
+    }
+
+    #card img{
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    #countries-cards{
+        row-gap: 25px;
+        column-gap: 1%;
+        height: 400px;
+    }
+
+    #card{
+        flex: 0 0 99%;
+        height: max-content;
+    }
+
+    #card figure{
+        padding: 0;
+        min-height: 150px;
+        height: min-content;
+    }
+
+    #card img{
+        width: 40%;
+    }
+
+
+    #card section div:nth-child(1){
+        min-height: max-content;
+        padding-bottom: 10px;
+    }
+}
+
+table{
+    margin-top: 40px;
+    padding-bottom: 100px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr th{
+    width: 100%;
+    padding: 20px;
+}
+
+table tr td:nth-child(1),
+table tr td:nth-child(3){
+    min-width: 270px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+table tr td:nth-child(2){
+    border: 2px dashed black;
+    width: 75%;
+}
+
+table tr:last-child{
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px){
+    
+    table tr td:nth-child(1),
+    table tr td:nth-child(3){
+        min-width: 160px;
+        padding: 2px 4px;
+    }
+}
+
+.barCell{
+    max-width: 100%;
+    height: 50px;
+}
+
+.barCell svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+  
+
+@media only screen and (max-width: 500px){
+
+    .table-sm{
+        margin-top: 10px;
+    }
+
+    .table-sm thead tr th{
+        padding: 4px;
+    }
+
+    .table-sm .barCell{
+        position: relative;
+        padding: 0;
+    }
+    
+    .table-sm .barCell span{
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .table-sm tbody {
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+    }
+
+    .table-sm tbody tr:nth-child(odd){
+        background-color: aliceblue;
+        border-top: 2px solid black;
+    }
+
+    .table-sm tbody tr:first-child{
+        border-top: none;
+    }
+
+    .table-sm tbody tr:nth-child(odd) td{
+        padding: 10px 0;
+    }
+
+
+    .table-sm tbody tr:nth-child(even){
+        border-bottom: 2px solid black;
+        
+    }
+
+    .table-sm tbody tr:last-child{
+        border-bottom: none;
+    }
+
+    .table-sm tr:nth-child(even) td{
+        border-top: 2px dashed black;
+    }
+}

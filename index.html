@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contries</title>
+    <link rel="stylesheet" href="src/screen.css">
+    <link rel="stylesheet" href="src/graphValues.css">
+    <script defer src="src/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>World Countries Data</h1>
+            <p>Currently, there are <span id="country-count"></span> countries</p>
+        </header>
+    
+        <section>
+            <nav id="filter-options">
+                <p class="hidden">Search country by name, city, or language</p>
+                <input type="search" id="search-box" placeholder="Search countries by name, city, or languages..."><br>
+                <button id="btn-name">NAME <img type="svg"></button>
+                <button id="btn-capital">CAPITAL <img hidden type="svg"></button>
+                <button id="btn-population">POPULATION <img hidden type="svg"></button>
+                <p>Result: <span id="search-result">0</span></p>
+            </nav>
+            <main id="countries-container">
+                <section>
+                    <div id="countries-cards">
+                    </div>
+                </section>
+                <div id="graph-container">
+                    <nav id="graph-options">
+                        <button id="btn-graphPopulation">Population</button>
+                        <button id="btn-graphLanguage">Languages</button>
+                    </nav>
+                </div>
+
+            </main>
+        </section>
+    
+        <footer>
+    
+        </footer>
+    </div>
+</body>
+</html>
